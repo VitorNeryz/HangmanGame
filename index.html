@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>  
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Jogo da Forca</title>
+        <link href="reset.css" rel="stylesheet">
+        <link href="style.css" rel="stylesheet">
+    </head>
+    <body>
+        <header class="header">
+            <h1 class="header__main-title">Jogo da Forca</h1>
+        </header>
+        <main class="game-container">
+            <div class="game-container__fork">
+                <div>
+                    <img class="hangman" src="./media/forca.png">
+                </div>
+            </div>
+            <div class="game-container__menu">
+                <label for="category">Categoria :</label>
+                <select class="select-category default-btn--hover" name ="category" class="category">
+                    <option>Animais</option>
+                    <option selected>Objetos</option>
+                </select>
+                <button class="btn-start default-btn default-btn--hover default-btn--active">Start Game</button>
+            </div>
+            
+            <div class="game-container__secret-word">
+                <ul class="secret-word__list-letters">
+                </ul>   
+            </div>
+            <ul class="keyboard">
+                <li class="keyboard__item keyboard__item--hover">A</li>
+                <li class="keyboard__item keyboard__item--hover">B</li>
+                <li class="keyboard__item keyboard__item--hover">C</li>
+                <li class="keyboard__item keyboard__item--hover">D</li>
+                <li class="keyboard__item keyboard__item--hover">E</li>
+                <li class="keyboard__item keyboard__item--hover">F</li>
+                <li class="keyboard__item keyboard__item--hover">G</li>
+                <li class="keyboard__item keyboard__item--hover">H</li>
+                <li class="keyboard__item keyboard__item--hover">I</li>
+                <li class="keyboard__item keyboard__item--hover">J</li>
+                <li class="keyboard__item keyboard__item--hover">K</li>
+                <li class="keyboard__item keyboard__item--hover">L</li>
+                <li class="keyboard__item keyboard__item--hover">M</li>
+                <li class="keyboard__item keyboard__item--hover">N</li>
+                <li class="keyboard__item keyboard__item--hover">O</li>
+                <li class="keyboard__item keyboard__item--hover">P</li>
+                <li class="keyboard__item keyboard__item--hover">Q</li>
+                <li class="keyboard__item keyboard__item--hover">R</li>
+                <li class="keyboard__item keyboard__item--hover">S</li>
+                <li class="keyboard__item keyboard__item--hover">T</li>
+                <li class="keyboard__item keyboard__item--hover">U</li>
+                <li class="keyboard__item keyboard__item--hover">V</li>
+                <li class="keyboard__item keyboard__item--hover">W</li>
+                <li class="keyboard__item keyboard__item--hover">X</li>
+                <li class="keyboard__item keyboard__item--hover">Y</li>
+                <li class="keyboard__item keyboard__item--hover">Z</li>
+            </ul>
+            
+        </main>
+        <script type="module" src="script.js"></script>
+        <script type="module"   src="./words.js"></script>
+    </body>
+</html>

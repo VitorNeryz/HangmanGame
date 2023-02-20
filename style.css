@@ -1,0 +1,155 @@
+:root{
+    --azul_principal:#64B7CC;
+    --azul_secundario: #A5BEFA;
+    --azul_terciario: rgb(122, 217, 248);
+    --azul_quarternario:rgb(0, 174, 255);
+    --red-hit:#fd3838;
+    --green_hit: #5ec474;
+}
+html{
+    background-color: #f1f8fc;
+}
+.hidden{
+    display:none;
+}
+.header{
+    padding: 1em;
+    text-align: center;
+    background-color: var(--azul_principal);
+}
+.header__main-title{
+    font-size: 32px;
+}   
+.game-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hangman{
+    margin-top:1.5em;
+    width: 250px;
+    height: 240px;
+}
+
+.default-btn,.select-category{
+    padding:0.8em;
+    margin:2.5em 1em 2.5em 0;
+    border: none;
+    border-radius: 7px;
+    background-color: var(--azul_secundario);
+}
+
+.select-category{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+
+    padding: 0.8em 2em 0.8em 0.8em;
+    background: url("./media/setaSelect.png") no-repeat;
+    background-size: 10px;
+    background-position: calc(100% - 5px) center;
+    background-color: var(--azul_secundario);
+}
+
+.default-btn--hover:hover{
+    cursor: pointer;
+    background-color: var(--azul_terciario);
+    transition: 0.4s;
+}
+.default-btn:active{
+    background-color: var(--azul_quarternario);
+}
+
+.secret-word__list-letters{
+    display: flex;
+    flex-wrap: wrap;
+}
+.list-letters__item{
+    width:2em;
+    height:3em;
+    margin: 1.5em 0.5em 1.5em 0.5em;
+    padding: 0.4em;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    color:black;
+    border-bottom: 4px solid black;
+    box-sizing: border-box;
+    
+}
+.letter{
+    font-size: 2.5em;
+    padding: 0.05em;
+}
+
+.keyboard{
+    display: flex;
+    width: 60%;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top:1em;
+}
+.keyboard__item{
+    display: inline-block;
+    width: 20px;
+
+    font-family: sans-serif;
+    text-align: center;
+    margin: 0.2em;
+    padding: 1em;
+    border: solid 1px black ;
+    border-radius: 10px;
+}
+.keyboard__item--hover:hover{
+    cursor: pointer;
+    background-color: black;
+    color: white;
+}
+.keyboard__item--red-hit{
+    background-color: var(--red-hit) ;
+    color:white;
+}
+.keyboard__item--green-hit{
+    background-color: var(--green_hit);
+    color:white;
+}
+
+@media screen and (min-width:320px)and(max-width:400px){
+    .game-container__secret-word{
+        display: flex;
+        justify-content: center;
+        padding: 0.5em;
+    }
+}
+@media screen and (max-width:767px){
+    .hangman{
+        width: 200px;
+        height: 200px;
+    }
+    .game-container__secret-word{
+        display: flex;
+        justify-content: center;
+        width: 90%;
+        padding: 0.5em;
+    }
+    
+    .list-letters__item{
+        width: 5%;
+    }
+    .letter{
+        font-size: 30px;
+    }
+    .keyboard{
+        width:90%;
+        margin-top:1em;
+    }
+    .keyboard__item{
+        width: 37px;
+    }
+}
+@media screen and (min-width:768px) and (max-width:1024px) {
+    .keyboard{
+        width: 90%;
+    }
+}

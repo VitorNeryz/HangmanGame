@@ -1,0 +1,24 @@
+{
+  "name": "jogo-da-forca",
+  "version": "1.0.0",
+  "description": "Jogo da forca clássico",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VitorNeryz/hangmanGame.git"
+  },
+  "keywords": [
+    "jogo-da-forca",
+    "hangman-Game",
+    "hangmanGame"
+  ],
+  "author": "Vitor Nery",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/VitorNeryz/hangmanGame/issues"
+  },
+  "homepage": "https://github.com/VitorNeryz/hangmanGame#readme"
+}
