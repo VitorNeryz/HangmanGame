@@ -3,7 +3,6 @@ import { categorias } from "./words.js";
 (function(){
     function randomWord(){
         const selectedIndex = document.querySelector(".select-category").selectedIndex;
-        console.log(selectedIndex)
         const categoryLenght = categorias[selectedIndex].length;
         let secretWord = categorias[selectedIndex][parseInt(Math.random() * categoryLenght)];
         return secretWord.toLowerCase();
@@ -21,14 +20,7 @@ import { categorias } from "./words.js";
             lettersList.appendChild(li);
         }
     }
-
-    // ativa o click de cada tecla do teclado
     const keyboard = document.querySelectorAll('.keyboard__item');
-    function addKeyboardEvent(){
-        keyboard.forEach((keycap)=>{
-            keycap.onclick = () => verifyLetter(keycap);
-        })
-    }
     //todas as funções do teclado
     const keyboardFunctions = {
         show:{
@@ -49,6 +41,11 @@ import { categorias } from "./words.js";
             keyboard.forEach((keycap)=>{
                 keycap.onclick = () =>{ return false };
             })
+        },
+        addKeyboardEvent(){
+            keyboard.forEach((keycap)=>{
+                keycap.onclick = () => verifyLetter(keycap);
+            })
         }
     }
 
@@ -58,7 +55,7 @@ import { categorias } from "./words.js";
         let menu = document.querySelector(".game-container__menu");
         menu.classList.add("hidden");
         createWordBox();
-        addKeyboardEvent();
+        keyboardFunctions.addKeyboardEvent();
     });
 
     function changeHangman(missedLetters){
@@ -87,7 +84,6 @@ import { categorias } from "./words.js";
         let result = [];
         for(let i = 0; i <= secretWord.length;i++){
             result.push(regex.exec(secretWord));
-            console.log(result[i]);
             if(result[i] === null){
                 break;
             }
@@ -113,6 +109,4 @@ import { categorias } from "./words.js";
             }
         }
     }
-    
-
 })();
